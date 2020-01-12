@@ -1,6 +1,6 @@
 /*REXX*****************************************************************/
 /*                                                                    */
-/* Return last execution of job                                       */
+/* Return joblist ascending jtype and descending enddate/time         */
 /*                                                                    */
 /**********************************************************************/
 /*trace r*/
