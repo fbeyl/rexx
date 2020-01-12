@@ -1,10 +1,12 @@
-Save lastexec to z/OS pds named: <userid>.clist
+Save  rexx/sdsf/src/ljobs to z/OS pds named: <userid>.clist
 Ex.
-Datasetname: Z40275.CLIST membername: lastexec
+Datasetname: Z40275.CLIST membername: ljobs
 
 Execute zowe zos-tso command
-Ex.
-$ zowe zos-tso issue command "ex (lastexec)" --ssm
+
+Example 1: list jobs starting with <userid> owner <userid>:
+
+$ zowe zos-tso issue command "ex (ljobs)" --ssm
 
 Z4027504  JOB04831 CC 0004 AWAITING OUTPUT JOB 10:35:22.40 2020.012
 Z4027501  JOB04830 CC 0001 AWAITING OUTPUT JOB 10:35:15.48 2020.012
@@ -17,4 +19,11 @@ Z4027500  JOB04824 CC 0000 AWAITING OUTPUT JOB 10:34:34.29 2020.012
 Z4027500  JOB04823 CC 0000 AWAITING OUTPUT JOB 10:34:25.10 2020.012
 Z40275  TSU04834  EXECUTING TSU 10:40:49.78 2020.012
 Z40275  TSU04820  EXECUTING TSU 10:27:38.06 2020.012
+READY 
+
+Example 2: list jobs starting with RSED from any owner.
+
+$ zowe zos-tso issue command "ex (ljobs) '* RSED*'" --ssm
+
+RSED  STC04139  EXECUTING STC 16:53:09.71 2020.005
 READY 
