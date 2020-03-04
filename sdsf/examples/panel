@@ -1,4 +1,8 @@
-1) Run sdsf panel 'status' with prefix:
+Save  rexx/sdsf/src/panel to uss file in use folder sdsf 
+Ex.
+/z/z40275/sdsf/panel.rexx
+
+Example 1: Run sdsf panel 'status' with prefix:
 
 Command:
 zowe zos-uss issue ssh "panel.rexx st 'z40275*'" --cwd ./sdsf
@@ -127,7 +131,7 @@ Response (json format):
 "DUBIOUS":"NO"}
 ]
 
-2) Run sdsf panel 'symbols':
+Example 2: Run sdsf panel 'symbols':
 
 Command:
 zowe zos-uss issue ssh "panel.rexx sym" --cwd ./sdsf
