@@ -1,0 +1,22 @@
+Scriptfile : sdsfPSstatusSSH.sh
+Run panel.rexx and pipe output json to jq to show only fields JNAME and STATUS
+
+---
+#!/bin/bash
+set -e;
+echo "Executing rexx";
+date +"%T";
+json=$(zowe zos-uss issue ssh "panel.rexx PS $1" --cwd ./sdsf);
+echo ${json:4} | jq '.[] | .JNAME+" "+.STATUS'
+echo "Done";date +"%T";
+---
+
+Example run with parametervalue z40275* to show processes which name start with z40275
+
+fbeyl@pvslt03 ~/Documenten/Zowe/CLI $ ./sdsfPSstatusSSH.sh z40275*
+Executing rexx
+22:55:54
+"Z40275 WAITING FOR CHILD"
+"Z402756 RUNNING"
+Done
+22:56:00
