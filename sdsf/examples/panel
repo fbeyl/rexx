@@ -1,8 +1,11 @@
-Run sdsf panel 'status' with prefix:
+1) Run sdsf panel 'status' with prefix:
 
+Command:
 zowe zos-uss issue ssh "panel.rexx st 'z40275*'" --cwd ./sdsf
 
- [
+Response (json format):
+
+[
 {
 "JNAME":"Z40275", 
 "TOKEN":"4T0SNDMso5Kpd/D3c/VBQNFz8OPP9W1A4E3voqIctLAbAwWyt2VATiAWNjYuFpKE6dTw6vf01UDo/XPy9oXDQOjgfPLjFqKkGQUJAAcctLAbAwWytyLRoTM=", 
@@ -124,11 +127,14 @@ zowe zos-uss issue ssh "panel.rexx st 'z40275*'" --cwd ./sdsf
 "DUBIOUS":"NO"}
 ]
 
-Run sdsf panel 'symbols':
+2) Run sdsf panel 'symbols':
+
 Command:
 zowe zos-uss issue ssh "panel.rexx sym" --cwd ./sdsf
-Response:
-$ [
+
+Response (json format):
+
+[
 {
 "SYMBOL":"&DAY.", 
 "TOKEN":"4T0SNDMso5Kpd/D3ffVBQNFz8OPP9W1Awl1N/WcctLAbAwWyt2VATiAWNjYuFpKE6dTw6vf01UDo33Py9oXDQOjufPLzF7CmGHCw96cxgaiiebA=", 
