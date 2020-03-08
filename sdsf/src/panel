@@ -14,7 +14,7 @@ if PrefixValue = "" | PrefixValue = "PrefixValue" then do
 end
 RC        = ISFCALLS("ON")  /* Create SDSF host command environment */
 IF RC <> 0 THEN RETURN      /* Abord if problem                     */
-ISFSECTRACE = "ON"
+/* ISFSECTRACE = "ON" */
 ISFOWNER = "*"
 ISFPREFIX = PrefixValue     /* Set filter                           */
 ISFJESNAME = "JES2"
